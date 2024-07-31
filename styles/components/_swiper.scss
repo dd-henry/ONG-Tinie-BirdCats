@@ -1,0 +1,112 @@
+.swiper {
+  width: 1200px;
+  height: 600px;
+  position: relative;
+
+  .swiper-slide {
+    display: flex;
+    gap: 10px;
+    .swiper-card {
+      display: flex;
+      position: absolute;
+      height: 350px;
+      width: 350px;
+      box-sizing: border-box;
+      padding: 20px;
+      top: 100px;
+      left: 100px;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: white;
+      border-radius: 25px;
+      color: #1a1442;
+      box-shadow: 10px 10px 10px #ff8b8781;
+
+      font-family: 'Roboto';
+      font-weight: 300;
+      font-size: 1.2rem;
+
+      name {
+        color: #1a1442;
+        font-weight: 600;
+        font-size: 1.3rem;
+      }
+
+      img {
+        width: 120px;
+        height: 120px;
+
+        position: absolute;
+        top: -50px;
+      }
+    }
+  }
+  .swiper-button-next {
+    color: #ff8b87;
+    transform: translateX(-50px);
+    transform: translateY(-100px);
+    z-index: 2;
+  }
+
+  .swiper-button-prev {
+    color: #ff8b87;
+    transform: translateY(-100px);
+
+    z-index: 2;
+  }
+
+  .swiper-slide:not(.swiper-slide-active) {
+    opacity: 0.5; /* Define a opacidade dos slides em preview */
+    transition: opacity 0.5s ease-in-out; /* Transição suave para o efeito de opacidade */
+  }
+
+  /* Estilo para o slide ativo */
+  .swiper-slide-active {
+    opacity: 1; /* Slide ativo com opacidade total */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .depoimentos {
+    .swiper {
+      max-width: 450px;
+
+      .swiper-slide {
+        gap: 10px;
+        .swiper-card {
+          width: 250px;
+          transform: translateX(-30px);
+
+          img {
+            top: -80px;
+          }
+        }
+      }
+
+      .swiper-slide:not(.swiper-slide-active) {
+        opacity: 0; /* Define a opacidade dos slides em preview */
+        transition: opacity 0.5s ease-in-out; /* Transição suave para o efeito de opacidade */
+      }
+
+      .swiper-button-next {
+        transform: translate(-80px, -100px);
+      }
+    }
+  }
+}
+
+@media (max-width: 1365px) {
+  .depoimentos {
+    .swiper {
+      .swiper-slide:not(.swiper-slide-active) {
+        opacity: 0; /* Define a opacidade dos slides em preview */
+        transition: opacity 0.5s ease-in-out; /* Transição suave para o efeito de opacidade */
+      }
+
+      .swiper-button-next {
+        transform: translate(-80px, -100px);
+      }
+    }
+  }
+}

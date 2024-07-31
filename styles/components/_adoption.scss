@@ -1,0 +1,221 @@
+.adopt {
+  position: relative;
+  transform: translateY(-100px);
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(255, 123, 119);
+  background: linear-gradient(
+    315deg,
+    rgba(255, 123, 119, 1) 0%,
+    rgba(255, 176, 173, 1) 100%
+  );
+  .adopt-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      color: white;
+      font-family: 'SF New Republic';
+      font-size: 2.6rem;
+      font-weight: 500;
+    }
+
+    .adopt-filter {
+      display: flex;
+      gap: 20px;
+      select {
+        width: 200px;
+        height: 40px;
+        border-radius: 6px;
+        background: none;
+        border: white 1px solid;
+        color: white;
+        padding: 0 10px;
+        cursor: pointer;
+      }
+
+      button {
+        width: 200px;
+        height: 40px;
+        background-color: #014c87;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        padding: 0 10px;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+    }
+  }
+  .adopt-cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100%;
+    .adopt-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      img {
+        width: 100%;
+      }
+      img:nth-of-type(2) {
+        width: 70px;
+        position: absolute;
+        bottom: 15%;
+        left: 10%;
+        margin-top: -10px;
+      }
+
+      .adopt-description {
+        font-family: 'Roboto';
+        color: white;
+
+        p:nth-of-type(1) {
+          line-height: 0.5rem;
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
+        p:nth-of-type(2) {
+          line-height: 0.5rem;
+          font-size: 0.6rem;
+          margin-bottom: 0;
+        }
+        p:nth-of-type(3) {
+          display: inline-flex;
+          line-height: 1rem;
+          font-size: 1rem;
+        }
+        p:nth-of-type(3)::before {
+          content: '';
+          display: block;
+          background: url('../../assets/pin.png') no-repeat;
+          background-size: 50%;
+          background-position: center;
+          background-position-y: 0px;
+          width: 15px;
+          height: 30px;
+          float: left;
+        }
+      }
+    }
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 410px;
+    height: 80px;
+    background-color: #ff8885;
+    border: white 1px solid;
+    color: white;
+    border-radius: 6px;
+    font-family: 'Roboto';
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+
+    img {
+      width: 15px;
+    }
+  }
+
+  .adopt-bottom_layer {
+    max-width: 100%;
+    position: absolute;
+    bottom: -1px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .adopt {
+    .adopt-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        font-size: 2.2rem;
+        font-weight: 500;
+      }
+
+      .adopt-filter {
+        display: flex;
+        gap: 6px;
+        select {
+          width: 85px;
+          height: 40px;
+          padding: 0 6px;
+          cursor: pointer;
+        }
+
+        button {
+          width: 80px;
+          height: 40px;
+
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .adopt-cards {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 6px;
+      .adopt-card {
+        max-width: 160px;
+        img {
+          width: 100%;
+        }
+        img:nth-of-type(2) {
+          width: 40px;
+          bottom: 40%;
+          left: 7%;
+        }
+      }
+    }
+
+    button {
+      gap: 15px;
+      width: 300px;
+      margin-top: 10px;
+      height: 70px;
+
+      font-size: 1.5rem;
+      font-weight: 500;
+      cursor: pointer;
+
+      img {
+        width: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1365px) {
+  .adopt {
+    .adopt-cards {
+      .adopt-card {
+        img:nth-of-type(2) {
+          width: 60px;
+          bottom: 25%;
+          left: 7%;
+        }
+      }
+    }
+    .adopt-bottom_layer {
+      width: 60%;
+    }
+  }
+}

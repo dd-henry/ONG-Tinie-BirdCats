@@ -1,0 +1,25 @@
+@use './abstract/root';
+@import './components/header';
+@import './components/banner';
+@import './components/infos';
+@import './components/adoption';
+@import './components/origin';
+@import './components/faq';
+@import './components/swiper';
+@import './components/depoimentos';
+@import './components/partners';
+@import './components/form';
+@import './components/contacts';
+@import './components/newsletter';
+@import './components/footer';
+
+body {
+  background: rgb(245, 245, 245);
+  background: linear-gradient(
+    180deg,
+    rgba(245, 245, 245, 1) 80%,
+    rgba(231, 128, 125, 1) 80%
+  );
+
+  overflow-x: hidden;
+}

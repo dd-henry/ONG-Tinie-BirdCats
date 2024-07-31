@@ -1,0 +1,86 @@
+.contacts {
+  transform: translateY(-250px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: rgba(231, 128, 125, 1);
+  h3 {
+    color: #fff;
+    font-family: 'SF New Republic';
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 200px;
+  }
+
+  .boxes {
+    display: flex;
+    gap: 30px;
+    .box {
+      width: 350px;
+      height: 200px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 80px;
+      background-color: #1168ad;
+      color: white;
+
+      img {
+        width: 40px;
+      }
+
+      p {
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+
+      p:nth-of-type(2) {
+        transform: translateY(-40px);
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      p,
+      a {
+        font-family: 'Roboto';
+      }
+
+      a {
+        color: #fff;
+        transform: translateY(-20px);
+      }
+
+      .redes {
+        transform: translateY(-30px);
+      }
+    }
+
+    .box:nth-of-type(1),
+    .box:nth-of-type(3) {
+      background: none;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contacts {
+    transform: translateY(-375px);
+
+    h3 {
+      margin-top: 200px;
+    }
+    .boxes {
+      flex-direction: column;
+
+      .box:nth-of-type(1),
+      .box:nth-of-type(3) {
+        border: #fff 1px solid;
+        padding-bottom: 50px;
+      }
+    }
+  }
+}

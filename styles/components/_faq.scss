@@ -1,0 +1,95 @@
+.faq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 100px;
+  background-color: #ffe7e7;
+  background-image: url(../../assets/paw-background.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+  transform: translateY(-100px);
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+
+  h2 {
+    font-family: 'SF New Republic';
+    color: #1a1442;
+    font-size: 2.5rem;
+  }
+
+  details {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    summary {
+      width: 600px;
+      height: 60px;
+      background-color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      padding-left: 50px;
+      border-radius: 6px;
+      justify-content: space-between;
+      padding-right: 30px;
+
+      .down-arrow {
+        width: 20px;
+        height: 20px;
+        background-image: url('../../assets/down-arrow.png');
+        background-position: center;
+        background-size: 100%;
+      }
+    }
+    .faq-desc {
+      background-color: #ff8b87;
+      transform: translateY(-17px);
+      box-sizing: border-box;
+      width: 680px;
+      padding: 20px;
+      border-radius: 0 0 6px 6px;
+    }
+
+    summary:focus {
+      background-color: #ff8b87;
+      border-radius: 6px 6px 0 0;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    summary:focus .down-arrow {
+      background-image: url('../../assets/up-arrow.png');
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .faq {
+    h2 {
+      align-self: center;
+      width: 50vw;
+    }
+
+    details {
+      max-width: 90vw;
+
+      summary {
+        box-sizing: border-box;
+        width: 100%;
+      }
+
+      .faq-desc {
+        transform: translateY(-17px);
+        box-sizing: border-box;
+        width: 100%;
+        padding: 20px;
+        border-radius: 0 0 6px 6px;
+      }
+    }
+  }
+}

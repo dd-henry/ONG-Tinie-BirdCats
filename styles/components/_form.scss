@@ -1,0 +1,141 @@
+.form {
+  background: linear-gradient(
+    180deg,
+    rgba(245, 245, 245, 1) 16%,
+    rgba(231, 128, 125, 1) 16%
+  );
+  background-image: url(../../assets/form-background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+
+  .form-text {
+    margin-left: 350px;
+    transform: translateY(-100px);
+
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-family: 'SF New Republic';
+    h2 {
+      font-size: 3rem;
+      font-weight: 500;
+      color: white;
+      margin-bottom: 60px;
+    }
+
+    input {
+      box-sizing: border-box;
+      background: none;
+      border-radius: 6px;
+      padding-left: 30px;
+      width: 480px;
+      height: 60px;
+      margin: 0 auto;
+      border: white 1px solid;
+      margin-bottom: 10px;
+    }
+
+    input::placeholder {
+      color: white;
+      font-weight: 600;
+    }
+
+    input:nth-of-type(4) {
+      height: 150px;
+    }
+
+    input:nth-of-type(4)::placeholder {
+      position: absolute;
+      top: 20px;
+    }
+
+    .form-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      width: 480px;
+      height: 100px;
+      background-color: #014c87;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-family: 'Roboto';
+      font-size: 1.8rem;
+      position: relative;
+      background-image: url(../../assets/paw.png);
+      background-repeat: no-repeat;
+      background-size: 20px;
+      background-position: 380px;
+    }
+  }
+
+  img {
+    width: 55%;
+    margin-right: 100px;
+    transform: translateY(-200px);
+    position: relative;
+    z-index: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form {
+    img {
+      display: none;
+    }
+    .form-text {
+      margin-left: 00px;
+      // background-color: red;
+      width: 100%;
+
+      h2 {
+        font-size: 2rem;
+        transform: translateY(20px);
+        transform: translateX(20px);
+        color: #014c87;
+
+        br {
+          display: none;
+        }
+      }
+
+      input {
+        width: 300px;
+      }
+
+      .form-button {
+        width: 90vw;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1365px) {
+  .form {
+    .form-text {
+      width: 150%;
+      h2 {
+        transform: translateY(50px);
+        br {
+          display: none;
+        }
+      }
+    }
+
+    input {
+      width: 300px;
+    }
+  }
+}

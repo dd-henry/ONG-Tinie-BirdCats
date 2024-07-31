@@ -1,0 +1,113 @@
+.banner {
+  z-index: -1;
+  transform: translateY(-100px);
+  background-color: #ffe1e0;
+  background-image: url(../../assets/banner-cat.png);
+  background-size: contain;
+  background-position: right 3% top 0;
+  background-repeat: no-repeat;
+  height: 650px;
+  max-width: 100vw;
+  box-sizing: border-box;
+  position: relative;
+
+  img {
+    margin-top: 200px;
+    margin-left: 150px;
+    position: fixed;
+    height: 50%;
+
+    &:nth-of-type(2) {
+      position: fixed;
+      left: 775px;
+      width: 60px;
+      height: 10px;
+      margin-top: 550px;
+    }
+  }
+
+  .banner-text {
+    display: flex;
+    margin-left: 500px;
+    flex-direction: column;
+    transform: translateY(230px);
+    h1 {
+      font-family: 'fonte';
+      color: #1a1442;
+      font-weight: 600;
+      font-size: 3rem;
+    }
+
+    .banner-buttom {
+      background-color: #1268ae;
+      width: 200px;
+      height: 70px;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-family: 'Roboto';
+      font-size: 1.2rem;
+      cursor: pointer;
+      z-index: 3;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner {
+    background-size: 200%;
+    background-position: -80px 0px;
+
+    height: 500px;
+
+    img {
+      margin-top: 150px;
+      margin-left: 30px;
+      position: fixed;
+      height: 10%;
+
+      &:nth-of-type(2) {
+        position: fixed;
+        left: 775px;
+        width: 60px;
+        height: 10px;
+        margin-top: 550px;
+      }
+    }
+
+    .banner-text {
+      margin-left: 30px;
+      transform: translateY(280px);
+      h1 {
+        font-weight: 600;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .banner {
+    img {
+      margin-top: 250px;
+      margin-left: 0px;
+      position: fixed;
+      height: 50%;
+
+      &:nth-of-type(2) {
+        position: fixed;
+        left: 50%;
+        width: 60px;
+        height: 10px;
+        margin-top: 550px;
+      }
+    }
+
+    .banner-text {
+      display: flex;
+      margin-left: 190px;
+      flex-direction: column;
+      transform: translateY(230px);
+    }
+  }
+}
