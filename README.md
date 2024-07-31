@@ -1,4 +1,7 @@
 # ONG-Tinie-BirdCats
+Olá, vamos conversar, para eu me apresentar e conhecer mais da empresa também!
+Whatsapp (11)988327375
+
 
 
 Página em desktop
